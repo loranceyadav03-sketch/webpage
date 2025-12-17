@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Bookstore</title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+       <img src="image4.webp">
+        <h1>BookNest</h1>
+      </div>
+
+      <nav class="nav">
+        <a href="#featured">Featured</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <input class="search" type="search" placeholder="Search books..." />
+        <button class="btn cart">Cart (0)</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h2>Discover your next great read</h2>
+        <p>Thousands of books — fiction, non-fiction, self-help, children's books and more.</p>
+        <a href="#featured" class="btn primary">Shop Featured</a>
+      </div>
+      <div class="hero-image">
+       <img src="image5.png">
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="featured" class="section">
+      <h3 class="section-title">Featured Books</h3>
+      <div class="grid books-grid">
+        <!-- Book 1 -->
+        <article class="book-card">
+         <img src="/image3.jpg">
+          <div class="book-body">
+            <h4 class="book-title">LINEAR ALGEBRA</h4>
+            <p class="book-author">by A. Sharma</p>
+            <p class="book-desc">A calm, insightful guide tO ALL Btech</p>
+            <div class="book-meta">
+              <span class="price">₹299</span>
+              <button class="btn">Add to cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 2 -->
+        <article class="book-card">
+          <img src="/image3.jpg">
+          <div class="book-body">
+            <h4 class="book-title">LINEAR ALGEBRA</h4>
+            <p class="book-author">by R. Kapoor</p>
+            <p class="book-desc">MOST helpful book for first year student</p>
+            <div class="book-meta">
+              <span class="price">₹399</span>
+              <button class="btn">Add to cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 3 -->
+        <article class="book-card">
+          <img src="/image3.jpg">
+          <div class="book-body">
+            <h4 class="book-title">LINEAR ALGEBRA</h4>
+            <p class="book-author">David C. Lay</p>
+            <p class="book-desc">Short, maths book for first year student</p>
+            <div class="book-meta">
+              <span class="price">₹249</span>
+              <button class="btn">Add to cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 4 -->
+        <article class="book-card">
+         <img src="/image3.jpg">
+          <div class="book-body">
+            <h4 class="book-title">LINEAR ALGEBRA</h4>
+            <p class="book-author">David C .Lay</p>
+            <p class="book-desc">Best book for first year Btech student</p>
+            <div class="book-meta">
+              <span class="price">₹349</span>
+              <button class="btn">Add to cart</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="categories" class="section">
+      <h3 class="section-title">Popular Categories</h3>
+      <div class="categories">
+        <div class="cat">Fiction</div>
+        <div class="cat">Self-help</div>
+        <div class="cat">Education</div>
+        <div class="cat">Children</div>
+        <div class="cat">Business</div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <h3 class="section-title">About BookNest</h3>
+      <p>BookNest is a small online bookstore dedicated to students, readers & learners. We offer fast delivery across India and helpful suggestions to find your next read.</p>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h3 class="section-title">Contact</h3>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! We will contact you.')">
+        <input type="text" placeholder="Your name" required />
+        <input type="email" placeholder="Email address" required />
+        <textarea placeholder="Message" rows="4"></textarea>
+        <button class="btn primary" type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> BookNest • All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Small script for year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
